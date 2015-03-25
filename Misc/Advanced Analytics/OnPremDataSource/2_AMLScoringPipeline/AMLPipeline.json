@@ -1,0 +1,30 @@
+ {   
+    "name":"AMLIoTPipeline", 
+    "properties":{   
+       "description":"Execute BES ML for scoring", 
+       "activities":[   
+          {   
+             "name":"AzureMLScoringActivity", 
+             "description":"Call forecasting webservice", 
+             "inputs":[   
+                {   
+                   "name":"RawOutputBlobTable" 
+                } 
+             ], 
+             "outputs":[   
+                {   
+                   "name":"ScoredOutputBlobTable" 
+                } 
+             ], 
+             "linkedServiceName":"AMLLinkedService", 
+             "type":"AzureMLBatchScoringActivity", 
+             "policy":{   
+                "concurrency":1, 
+                "executionPriorityOrder":"NewestFirst", 
+                "retry":1, 
+                "timeout":"02:00:00" 
+             } 
+          } 
+       ] 
+    } 
+ } 

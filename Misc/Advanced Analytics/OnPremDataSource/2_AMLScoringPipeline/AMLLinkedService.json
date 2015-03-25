@@ -1,0 +1,8 @@
+ {   
+    "name":"AMLLinkedService", 
+    "properties":{   
+    "type": "AzureMLLinkedService", 
+    "mlEndpoint":"Your BES endpoint URL ending in /jobs", 
+    "apiKey":"Your webservice API Keys" 
+    } 
+ } 
