@@ -1,24 +1,22 @@
 CREATE TABLE dbo.InputStatsData
 (
-    ID int IDENTITY(1,1) NOT NULL, 
     DateTime varchar(50),
-    Squence varchar(50),
+    Squence varchar(50) NOT NULL,
     DeviceId varchar(50),
     IncidentCode varchar(50),
     IncidentDesc varchar(150),
     Severity varchar(50),
-    CONSTRAINT PK_Input PRIMARY KEY (ID)
+    CONSTRAINT PK_Input PRIMARY KEY (Squence)
 )
 GO
 
 CREATE TABLE dbo.Scores
 (
-    ID int IDENTITY(1,1) NOT NULL,
-    Sequence varchar(50),
+    Squence varchar(50) NOT NULL,
     DeviceId varchar(50),
     ScoredLabels varchar(50),
     ScoredProbabilities varchar(50),
-    CONSTRAINT PK_Scores PRIMARY KEY (ID)
+    CONSTRAINT PK_Scores PRIMARY KEY (Squence)
 )
 GO
 
