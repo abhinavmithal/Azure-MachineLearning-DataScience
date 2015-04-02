@@ -11,8 +11,8 @@
         "location":
         {
             "type": "AzureSQLTableLocation",
-            "tableName": "scores",
-            "linkedServiceName": "OnPremSQL"
+            "tableName": "Scores",
+            "linkedServiceName": "OnPremSQLLinkedService"
         },
         "availability": 
         {

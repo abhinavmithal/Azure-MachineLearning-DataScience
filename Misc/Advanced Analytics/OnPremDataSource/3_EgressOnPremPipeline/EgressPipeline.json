@@ -1,5 +1,5 @@
 {
-	"name": "ScoresPipeline",
+	"name": "EgressPipeline",
 	"properties":
 	{
 		"description" : "This copies scored data back to on-prem SQL DB",

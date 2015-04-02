@@ -1,0 +1,10 @@
+# If you have completed the Ingress step already, skip this as it was already defined in the Ingress pipeline.
+# Otherwise, if you want to build this pipeline alone - Here is how it looks. (Uncomment the following lines before using)
+
+#{
+#    "name": "BlobLinkedService",
+#    "properties": {
+#        "type": "AzureStorageLinkedService",
+#        "connectionString": "DefaultEndpointsProtocol=https;AccountName=<accountname>;AccountKey=<accountkey>"
+#    }
+#}

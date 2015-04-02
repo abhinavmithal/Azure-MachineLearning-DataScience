@@ -1,34 +1,37 @@
-{
-    "name": "ProcessedOutputBlobTable",
-    "properties":
-    {
-        "structure":  
-         [ 
-            { "name": "Time", "type": "String"},
-	    { "name": "DeviceId", "type": "String"},
-            { "name": "ScoredProbabilities", "type": "String"}
-        ],
-        "location": 
-        {
-            "type": "AzureBlobLocation",
-            "folderPath": "AMTest/OutputfromAML/",
-			"fileName": "{Hour}Output.csv",
-			"partitionedBy": 
-			[
-    		    		{ "name": "Date", "value": { "type": "DateTime", "date": "SliceStart", "format": "yyyyMMdd" } },
-    		    		{ "name": "Hour", "value": { "type": "DateTime", "date": "SliceStart", "format": "HHmm" } } 
-			],
-            "format":
-            {
-                "type": "TextFormat",
-                "columnDelimiter": ","
-            },
-            "linkedServiceName": "BlobStore"
-        },
-        "availability": 
-        {
-            "frequency": "hour",
-            "interval": 1
-        }
-    }
-}
+# If you have completed the Scroring step already, skip this as it was already defined in Scoring pipeline step.
+# Otherwise if you want to build this pipeline alone - Here is how it looks. (Uncomment the following lines before using)
+
+#{
+#    "name": "ScoredOutputBlobTable",
+#    "properties":
+#   {
+#        "structure":  
+#         [ 
+#            { "name": "Time", "type": "String"},
+#	    { "name": "DeviceId", "type": "String"},
+#            { "name": "ScoredProbabilities", "type": "String"}
+#        ],
+#        "location": 
+#        {
+#            "type": "AzureBlobLocation",
+#            "folderPath": "AMTest/OutputfromAML/",
+#			"fileName": "{Hour}Output.csv",
+#			"partitionedBy": 
+#			[
+#    		    		{ "name": "Date", "value": { "type": "DateTime", "date": "SliceStart", "format": "yyyyMMdd" } },
+#    		    		{ "name": "Hour", "value": { "type": "DateTime", "date": "SliceStart", "format": "HHmm" } } 
+#			],
+#            "format":
+#            {
+#                "type": "TextFormat",
+#                "columnDelimiter": ","
+#            },
+#            "linkedServiceName": "BlobLinkedService"
+#        },
+#        "availability": 
+#        {
+#            "frequency": "hour",
+#            "interval": 1
+#        }
+#    }
+#}

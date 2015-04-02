@@ -1,5 +1,5 @@
 {
-	"name": "ObsrvPipeline",
+	"name": "IngressPipeline",
 	"properties":
 	{
 		"description" : "This pipeline has one Copy activity that copies data from an on-prem SQL to Azure blob",

@@ -6,7 +6,7 @@
 		{
 			"type": "OnPremisesSqlServerTableLocation",
 			"tableName": "InputStatsData",
-			"linkedServiceName": "OnPremSQL"
+			"linkedServiceName": "OnPremSQLLinkedService"
 		},
 		"availability": 
 		{
