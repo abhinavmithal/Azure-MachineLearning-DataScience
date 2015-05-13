@@ -1,0 +1,36 @@
+{
+	"name": "EgressPipeline",
+	"properties":
+	{
+		"description" : "This copies scored data back to on-prem SQL DB",
+		"activities":
+		[
+		{
+			"name": "CopyFromBlobToSQL",
+			"description": "Push AML Predictions to on-prem SQL Server",     
+			"type": "CopyActivity",
+			"inputs": [ {"name": "ScoredOutputBlobTable"} ],
+			"outputs": [ {"name": "OutputOnPremSQLTable"} ],
+			"transformation":
+			{
+				"source":
+				{                               
+					"type": "BlobSource"
+				},
+				"sink":
+				{
+					"type": "SqlSink"
+				}   
+			},
+			"Policy":
+			{
+				"concurrency": 1,
+				"executionPriorityOrder": "NewestFirst",
+				"style": "StartOfInterval",
+				"retry": 0,
+				"timeout": "01:00:00"
+			}       
+		}
+		]
+	}
+}

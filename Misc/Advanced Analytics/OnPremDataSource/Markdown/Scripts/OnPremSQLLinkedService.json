@@ -1,0 +1,10 @@
+{
+    "name": "OnPremSQLLinkedService",
+    "properties": {
+        "type": "OnPremisesSqlLinkedService",
+        "ConnectionString": "Data Source=<servername>;Initial Catalog=<databasename>;Integrated Security=False;User ID=<username>;Password=<password>;",
+        "gatewayName": "<Name of the gateway that the Data Factory service should use to connect to the on-premises SQL Server database>",
+        "username": "<Specify user name if you are using Windows Authentication>",
+        "password": "<Specify password for the user account>"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "OutputOnPremSQLTable",
+    "properties":
+    {
+        "structure":
+         [ 
+            { "name": "Time", "type": "String"},
+	    { "name": "DeviceId", "type": "String"},
+            { "name": "ScoredProbabilities", "type": "String"}
+        ],
+        "location":
+        {
+            "type": "AzureSQLTableLocation",
+            "tableName": "Scores",
+            "linkedServiceName": "OnPremSQLLinkedService"
+        },
+        "availability": 
+        {
+            "frequency": "Hour",
+            "interval": 1            
+        }
+    }
+}
